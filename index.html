@@ -491,8 +491,11 @@
   @media(max-width:768px){
     nav { padding: 14px 20px; }
     nav .nav-links { display: none; }
-    h1 { font-size: 36px; }
-    .hero-stats { gap: 20px; }
+    .hero { padding: 100px 16px 60px; }
+    h1 { font-size: clamp(26px, 9vw, 40px); letter-spacing: -1px; word-break: normal; overflow-wrap: break-word; }
+    .hero-sub { font-size: 16px; padding: 0 4px; }
+    .hero-stats { gap: 16px; flex-wrap: wrap; }
+    .stat-n { font-size: 20px; }
     .demo-body { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr; }
     .step:not(:last-child) { border-right: none; border-bottom: 1px solid var(--border); }
@@ -512,6 +515,16 @@
     .chat-messages { padding: 16px; }
     .chat-footer { padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
     .toast { bottom: calc(64px + env(safe-area-inset-bottom)); right: 12px; left: 12px; max-width: none; }
+  }
+
+  @media(max-width:400px){
+    .hero { padding: 90px 14px 50px; }
+    h1 { font-size: clamp(24px, 8.5vw, 32px); }
+    .hero-sub { font-size: 14px; }
+    .hero-stats { gap: 12px 18px; }
+    .stat-n { font-size: 17px; }
+    .stat-l { font-size: 10px; }
+    nav .logo { font-size: 18px; }
   }
 </style>
 </head>
